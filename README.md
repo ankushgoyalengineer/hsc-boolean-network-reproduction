@@ -51,7 +51,7 @@ I encoded all 13 columns from the figure and ran each through `update_state()` o
 
 Checking known states can't reveal missing or extra ones, so I searched all 2²¹ = 2,097,152 possible states and kept every state that maps to itself in one update.
 
-**Result**: exactly 13 fixed points.** Eleven match Figure 3 exactly. The other two match GMP1 and GMP3 except at a single node, Runx1.
+**Result: exactly 13 fixed points.** Eleven match Figure 3 exactly. The other two match GMP1 and GMP3 except at a single node, Runx1.
 
 This search finds only fixed points, not cycles, since a cycle never maps to itself in a single step. Cycles are identified in Validation 3.
 
