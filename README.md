@@ -201,7 +201,6 @@ Neither choice is clearly correct. Excluding cycles assumes their states would r
 - `model.py`, `model.ipynb`: the rules, all three validations, the mutant simulations and the comparison tables
 - `test_model.py`: 15 automated tests (`pytest`)
 - `herrera_check/boolnet_attractors_active.txt`, `herrera_check/boolnet_attractors_full.txt`: output of BoolNet's `getAttractors()` on the authors' rules file, used as reference data
-- `herrera_check/run_boolnet.R`: the R commands that produced those two files
 - `basin_cache/`: created on the first run and not committed. It stores saved basin counts so repeat runs are fast. The first run takes about 3 minutes.
 
 AI tools were used for code review and debugging.
@@ -223,7 +222,7 @@ This repository does not include the authors' BoolNet rules file, because their 
 
 ## Status of the findings
 
-[Choose one before publishing: "I have not yet contacted the authors about these findings." or "I reported the Figure 3 issue to the corresponding author on DATE."]
+I have not contacted the authors about these findings.
 
 ## License
 
