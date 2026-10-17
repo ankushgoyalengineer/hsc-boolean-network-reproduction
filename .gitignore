@@ -1,3 +1,11 @@
-git rm -r --cached __pycache____pycache__/
+__pycache__/
+*.pyc
+.pytest_cache/
 .ipynb_checkpoints/
 .venv/
+.Rhistory
+.RData
+.Rproj.user/
+basin_cache/
+herrera_check/BoolNet_HSC_network.txt
+*.pdf
