@@ -198,11 +198,36 @@ Neither choice is clearly correct. Excluding cycles assumes their states would r
 
 ## Repository Contents
 
-- `model.py` / notebook: the rules, all three validations, the mutant simulations and the comparison tables
-- `boolnet_attractors_active.txt`, `boolnet_attractors_full.txt`: BoolNet output from the authors' rules file, used as reference data
-- `basin_counts_*.json`: saved basin counts for the wild type and each mutant
+- `model.py`, `model.ipynb`: the rules, all three validations, the mutant simulations and the comparison tables
+- `test_model.py`: 15 automated tests (`pytest`)
+- `herrera_check/boolnet_attractors_active.txt`, `herrera_check/boolnet_attractors_full.txt`: output of BoolNet's `getAttractors()` on the authors' rules file, used as reference data
+- `herrera_check/run_boolnet.R`: the R commands that produced those two files
+- `basin_cache/`: created on the first run and not committed. It stores saved basin counts so repeat runs are fast. The first run takes about 3 minutes.
 
 AI tools were used for code review and debugging.
+
+## How to run
+
+Tested on Python 3.14.7 on Windows from a fresh clone: all 15 tests pass in about 3 minutes.
+
+    git clone https://github.com/ankushgoyalengineer/hsc-boolean-network-reproduction.git
+    cd hsc-boolean-network-reproduction
+    pip install -r requirements.txt
+    pytest
+
+The BoolNet cross-check also needs R with the `BoolNet` package.
+
+## The authors' rules file
+
+This repository does not include the authors' BoolNet rules file, because their repository has no license. To repeat the cross-check, download `BoolNet_HSC_network.txt` from the `Discrete analysis/` folder of https://github.com/joelhema/Herrera-et-al-2024 and save it as `herrera_check/BoolNet_HSC_network.txt`.
+
+## Status of the findings
+
+[Choose one before publishing: "I have not yet contacted the authors about these findings." or "I reported the Figure 3 issue to the corresponding author on DATE."]
+
+## License
+
+Code: MIT, see `LICENSE`. The paper and the authors' materials are not covered by this license.
 
 ## References
 
