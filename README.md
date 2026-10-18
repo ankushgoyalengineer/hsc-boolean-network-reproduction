@@ -65,7 +65,7 @@ Runx1 = (PU.1 or GATA2 or Runx1) and not Ikzf1
 
 Every GMP state has PU.1 ON and Ikzf1 OFF, so under this rule Runx1 must be ON in all GMP attractors. Figure 3 shows it OFF in two of them.
 
-The authors' analysis notebook writes its results to PDF reports that aren't included in the repository, so there was no saved attractor list to compare against. To settle the question, I ran the authors' own rules file through the same R package they used (BoolNet, `getAttractors()` with synchronous updating; output files are in the `herrera_check/` folder). Their software returns Runx1 active in all four GMP attractors, matching my independent Python implementation exactly.
+The authors' analysis notebook writes its results to PDF reports that aren't included in the repository, so there was no saved attractor list to compare against. To settle the question, I ran the authors' own rules file through the same R package they used (BoolNet, `getAttractors()` with synchronous updating; output files are in the `herrera_check/` folder). BoolNet returns Runx1 active in all four GMP attractors, matching my independent Python implementation exactly.
 
 Figure 3 shows the attractors from asynchronous updating, while this check used synchronous updating. That doesn't affect the comparison: a fixed point is a state that every rule maps to itself, so it's the same whichever order the genes update in. The two methods differ only in cycles. Synchronous updating also produces five two-state cycles that don't appear under asynchronous updating, and these aren't part of Figure 3.
 
